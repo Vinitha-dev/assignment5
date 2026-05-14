@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fff;
+    color:#222;
+}
+
+/* PRELOADER */
+
+#preloader{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:#0f2f22;
+    z-index:9999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.loader-leaf{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:6px solid #ffffff33;
+    border-top-color:#6de38a;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* NAVBAR */
+
+.custom-navbar{
+    padding:15px 0;
+    transition:0.4s;
+    background:transparent;
+}
+
+.custom-navbar.scrolled{
+    background:rgba(8, 32, 20, 0.95);
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    color:#fff !important;
+    font-size:28px;
+}
+
+.nav-link{
+    color:#fff !important;
+    margin-left:15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#80ed99 !important;
+}
+
+/* HERO */
+
+.hero-section{
+    height:100vh;
+    position:relative;
+    background:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1920') center/cover fixed;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,
+    rgba(0,0,0,0.7),
+    rgba(17,78,46,0.5));
+}
+
+.hero-title{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.btn-green{
+    background:#2d6a4f;
+    color:#fff;
+    border:none;
+    padding:12px 28px;
+    border-radius:50px;
+    transition:0.4s;
+}
+
+.btn-green:hover{
+    background:#40916c;
+    transform:translateY(-3px);
+}
+
+.wave{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+/* SECTION */
+
+.section-padding{
+    padding:100px 0;
+}
+
+.section-title{
+    font-size:42px;
+    font-weight:700;
+    color:#1b4332;
+    margin-bottom:20px;
+}
+
+/* GLASS CARD */
+
+.glass-card{
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* SERVICE */
+
+.service-card{
+    background:#fff;
+    padding:40px 25px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    height:100%;
+}
+
+.service-card i{
+    font-size:50px;
+    color:#2d6a4f;
+    margin-bottom:20px;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+/* COUNTER */
+
+.counter-section{
+    background:linear-gradient(to right,#1b4332,#2d6a4f);
+    color:#fff;
+    padding:80px 0;
+}
+
+.counter{
+    font-size:55px;
+    font-weight:700;
+}
+
+/* PROJECT */
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.project-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.5s;
+    color:#fff;
+}
+
+.project-card:hover img{
+    transform:scale(1.1);
+}
+
+.project-card:hover .project-overlay{
+    opacity:1;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-card{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+/* TEAM */
+
+.team-card{
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+}
+
+.team-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.social-icons i{
+    margin:0 8px;
+    font-size:20px;
+    cursor:pointer;
+    color:#2d6a4f;
+}
+
+/* CONTACT */
+
+.contact-form input,
+.contact-form textarea{
+    margin-bottom:20px;
+    border-radius:15px;
+    padding:15px;
+}
+
+.map-placeholder{
+    height:300px;
+    background:#d8f3dc;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:#1b4332;
+}
+
+.map-placeholder i{
+    font-size:50px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#081c15;
+    color:#fff;
+    padding:70px 0 20px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.newsletter{
+    display:flex;
+}
+
+.newsletter input{
+    flex:1;
+    padding:10px;
+    border:none;
+}
+
+.newsletter button{
+    background:#2d6a4f;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+}
+
+.footer-social i{
+    margin-right:10px;
+    font-size:22px;
+}
+
+/* CHATBOT */
+
+.chatbot{
+    position:fixed;
+    top:90px;
+    right:20px;
+    z-index:999;
+}
+
+.chat-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#2d6a4f;
+    color:#fff;
+    font-size:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.chat-btn:hover{
+    transform:scale(1.1);
+}
+
+/* SCROLL TOP */
+
+#scrollTopBtn{
+    position:fixed;
+    bottom:30px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#1b4332;
+    color:#fff;
+    display:none;
+    z-index:999;
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size:45px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .newsletter{
+        flex-direction:column;
+    }
+
+    .newsletter button{
+        margin-top:10px;
+    }
+}
